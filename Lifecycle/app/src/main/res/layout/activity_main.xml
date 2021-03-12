@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:id="@+id/greetTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/counter"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="150dp"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/counterTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="7dp"
+            android:textSize="22sp"/>
+
+        <Button
+            android:id="@+id/incButton"
+            android:layout_gravity="center"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="@string/increment" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
