@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Activity</string>
+    <string name="another_activity">Another activity</string>
+    <string name="another_activity_with_result">Another activity with result</string>
+    <string name="simple_toast">Simple toast</string>
+    <string name="simple_activity_text">This is a simple activity</string>
+    <string name="type_msg">Type your message…</string>
+    <string name="go_back">Go back</string>
+    <string name="msg_calling_activity">Message from calling activity</string>
+    <string name="no_ans_from_called_activity">No answer from called activity</string>
+
+</resources>
