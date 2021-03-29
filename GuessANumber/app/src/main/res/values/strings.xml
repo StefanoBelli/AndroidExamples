@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">GuessANumber</string>
+    <string name="one_as_num">1</string>
+    <string name="two_as_num">2</string>
+    <string name="three_as_num">3</string>
+    <string name="four_as_num">4</string>
+    <string name="five_as_num">5</string>
+    <string name="six_as_num">6</string>
+    <string name="seven_as_num">7</string>
+    <string name="eight_as_num">8</string>
+    <string name="nine_as_num">9</string>
+    <string name="zero_as_num">0</string>
+    <string name="start_game">Start a new game</string>
+    <string name="start_game_youwin">Start a new game (you win)</string>
+    <string name="start_game_youloose">Start a new game (you loose)</string>
+    <string name="toobig">Too big</string>
+    <string name="toosmall">Too small</string>
+    <string name="retries">Retries</string>
+    <string name="canc">C</string>
+    <string name="status_image_expl">Status image for current game</string>
+</resources>
