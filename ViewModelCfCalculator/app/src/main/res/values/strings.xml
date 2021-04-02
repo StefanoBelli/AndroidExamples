@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ViewModelCfCalculator</string>
+    <string name="male">Male?</string>
+    <string name="type_name">Type your name…</string>
+    <string name="type_surname">Type your surname…</string>
+    <string name="type_birthday">Type your birthday…</string>
+    <string name="type_birth_city">Type your birth city…</string>
+</resources>
