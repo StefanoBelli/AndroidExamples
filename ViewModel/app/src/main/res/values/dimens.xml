@@ -2,4 +2,5 @@
 <resources>
     <dimen name="default_pad">20dp</dimen>
     <dimen name="big_text">20sp</dimen>
+    <dimen name="small_text">16sp</dimen>
 </resources>

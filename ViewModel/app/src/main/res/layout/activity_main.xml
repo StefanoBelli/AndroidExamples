@@ -7,18 +7,18 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/hashTv"
+        android:id="@+id/hashMd5Tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/default_pad"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nonHashedEt"
-        android:textSize="@dimen/big_text"
+        app:layout_constraintTop_toBottomOf="@+id/clearTextEt"
+        android:textSize="@dimen/small_text"
         android:typeface="monospace" />
 
     <EditText
-        android:id="@+id/nonHashedEt"
+        android:id="@+id/clearTextEt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/default_pad"
@@ -29,5 +29,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/hashSha1Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_pad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hashMd5Tv"
+        android:textSize="@dimen/small_text"
+        android:typeface="monospace" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
