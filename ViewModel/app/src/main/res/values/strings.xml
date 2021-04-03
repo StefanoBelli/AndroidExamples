@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ViewModel</string>
+    <string name="type_to_hash">Type here to hash…</string>
+</resources>
