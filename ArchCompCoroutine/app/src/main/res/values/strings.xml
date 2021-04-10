@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ArchCompCoroutine</string>
+    <string name="get">GET</string>
+    <string name="type_url">Type URL…</string>
+</resources>
