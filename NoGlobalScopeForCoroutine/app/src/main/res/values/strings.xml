@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NoGlobalScopeForCoroutine</string>
+    <string name="gs">GlobalScope</string>
+    <string name="ls">LifecycleScope</string>
+    <string name="cs">CoroutineScope</string>
+    <string name="finish">Finish</string>
+</resources>
