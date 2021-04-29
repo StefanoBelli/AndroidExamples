@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">UrlDownloader</string>
+    <string name="type_url">Type URL in here…</string>
+    <string name="fire">Fire</string>
+</resources>
