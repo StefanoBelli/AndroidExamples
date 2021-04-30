@@ -3,11 +3,11 @@ package it.ssynx.urldownloader
 import android.app.DownloadManager
 import android.database.Cursor
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
 import android.text.method.ScrollingMovementMethod
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doAfterTextChanged
 import androidx.lifecycle.lifecycleScope
 import it.ssynx.urldownloader.databinding.ActivityMainBinding
@@ -47,19 +47,19 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this, fmtDlStarted.format(f), Toast.LENGTH_SHORT).show()
     }
 
-    private fun buildRequest(filename : String, uri: Uri) : DownloadManager.Request {
+    private fun buildRequest(filename: String, uri: Uri) : DownloadManager.Request {
         val req = DownloadManager.Request(uri)
         req.setTitle(appName)
         req.setDescription(filename)
         req.setNotificationVisibility(
-            DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED
+                DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED
         )
         req.setAllowedNetworkTypes(
-            DownloadManager.Request.NETWORK_WIFI or
-                    DownloadManager.Request.NETWORK_MOBILE
+                DownloadManager.Request.NETWORK_WIFI or
+                        DownloadManager.Request.NETWORK_MOBILE
         )
         req.setDestinationInExternalPublicDir(
-            Environment.DIRECTORY_DOWNLOADS, filename
+                Environment.DIRECTORY_DOWNLOADS, filename
         )
 
         return req
@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity() {
 
             try {
                 req = buildRequest(filename, url)
-            } catch(e: IllegalArgumentException) {
+            } catch (e: IllegalArgumentException) {
                 Toast
                     .makeText(this, getString(R.string.check_error), Toast.LENGTH_LONG)
                     .show()
@@ -135,14 +135,22 @@ class MainActivity : AppCompatActivity() {
                 mtx.lock()
                 while(activeReqIds.size > 0) {
                     val reqIdx = (0 until activeReqIds.size).random()
+                    val query = DownloadManager.Query().apply {
+                        setFilterById(activeReqIds[reqIdx])
+                        setFilterByStatus(DownloadManager.STATUS_FAILED or
+                                DownloadManager.STATUS_PAUSED or
+                                DownloadManager.STATUS_SUCCESSFUL or
+                                DownloadManager.STATUS_RUNNING or
+                                DownloadManager.STATUS_PENDING)
+                    }
 
                     withContext(Dispatchers.IO) {
-                        val query = dlManager.query(
-                            DownloadManager.Query().setFilterById(activeReqIds[reqIdx]))
-                        val columnStatusIdx = query.getColumnIndex(DownloadManager.COLUMN_STATUS)
-                        query.moveToFirst()
+                        val cur = dlManager.query(query)
+                        val columnStatusIdx = cur.getColumnIndex(DownloadManager.COLUMN_STATUS)
 
-                        logBasedOnStatus(query, reqIdx, query.getInt(columnStatusIdx))
+                        if (cur.moveToFirst()) {
+                            logBasedOnStatus(cur, reqIdx, cur.getInt(columnStatusIdx))
+                        }
                     }
 
                     delay(500)

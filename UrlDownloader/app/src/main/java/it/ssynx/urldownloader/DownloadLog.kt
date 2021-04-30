@@ -18,11 +18,11 @@ class DownloadLog {
         }
 
         fun successful(c: Cursor, tv: TextView, ctx: Context) {
-            baseLogger(c, ctx.getString(R.string.finished), tv)
+            baseLogger(c, "[${ctx.getString(R.string.finished)}]", tv)
         }
 
         fun failed(c: Cursor, tv: TextView, ctx: Context) {
-            baseLogger(c, ctx.getString(R.string.failed), tv)
+            baseLogger(c, "[${ctx.getString(R.string.failed)}]", tv)
         }
 
         fun paused(c: Cursor, tv: TextView, ctx: Context) {
