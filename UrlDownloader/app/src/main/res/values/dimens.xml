@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="top_pad">100dp</dimen>
+    <dimen name="mid_pad">50dp</dimen>
+    <dimen name="bottom_pad">150dp</dimen>
+    <dimen name="tv_log_bottom_pad">10dp</dimen>
+</resources>

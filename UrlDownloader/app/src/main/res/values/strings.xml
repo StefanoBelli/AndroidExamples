@@ -1,5 +1,15 @@
 <resources>
     <string name="app_name">UrlDownloader</string>
+    <string name="url">URL</string>
     <string name="type_url">Type URL in here…</string>
-    <string name="fire">Fire</string>
+    <string name="out_filename">Output filename</string>
+    <string name="type_out_filename">Type filename in here…</string>
+    <string name="download">Download</string>
+    <string name="dl_started">Download started: %s</string>
+    <string name="check_error">Are you using a valid URI? (preceding http:// or https://)</string>
+    <string name="paused">paused</string>
+    <string name="pending">pending</string>
+    <string name="still_running">still running</string>
+    <string name="finished">finished</string>
+    <string name="failed">failed</string>
 </resources>
